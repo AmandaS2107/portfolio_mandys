@@ -10,9 +10,121 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_06_19_173322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abouts", force: :cascade do |t|
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.string "name"
+    t.text "description"
+    t.string "institution"
+    t.string "city"
+    t.string "country"
+    t.string "url"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.string "name"
+    t.text "description"
+    t.string "company"
+    t.string "city"
+    t.string "country"
+    t.string "url"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "project_management_projects", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.string "name"
+    t.string "type"
+    t.text "description"
+    t.string "company"
+    t.integer "budget"
+    t.string "duration"
+    t.string "city"
+    t.string "country"
+    t.string "url"
+    t.string "photo_1"
+    t.string "photo_2"
+    t.string "photo_3"
+    t.string "partner"
+    t.string "partner_logo_1"
+    t.string "partner_logo_2"
+    t.string "partner_logo_3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tools", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "url"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trainings", force: :cascade do |t|
+    t.integer "year"
+    t.string "name"
+    t.text "description"
+    t.string "institution"
+    t.string "city"
+    t.string "country"
+    t.string "url"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "web_dev_projects", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.string "name"
+    t.string "type"
+    t.text "description"
+    t.string "company"
+    t.integer "budget"
+    t.string "duration"
+    t.string "city"
+    t.string "country"
+    t.string "url"
+    t.string "github"
+    t.string "programming_languages"
+    t.string "photo_1"
+    t.string "photo_2"
+    t.string "photo_3"
+    t.string "partner"
+    t.string "partner_logo_1"
+    t.string "partner_logo_2"
+    t.string "partner_logo_3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

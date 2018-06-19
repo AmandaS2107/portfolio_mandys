@@ -1,0 +1,2 @@
+class ProjectManagementProject < ApplicationRecord
+end
