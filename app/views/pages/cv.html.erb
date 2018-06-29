@@ -4,4 +4,16 @@
   </div>
   <p>This is some text.</p>
   <p>This is another text.</p>
+
+
+<% @educations.each do |education| %>
+<%= education.start_date %>
+<%= education.end_date %>
+<%= education.name %>
+<%= education.institution %>
+<%= education.city %>, <%= education.country %>
+<%= image_tag education.photo , id: education.photo %>
+<br>
+<% end %>
+
 </div>
